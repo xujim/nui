@@ -30,7 +30,7 @@
                                               bottom:[NUISettings getColor:@"background-color-bottom" withClass:className]
                                               frame:layer.frame];
             
-            if (item.gradientLayer) {
+            if (item.gradientLayer && item.gradientLayer.superlayer == layer) {
                 [layer replaceSublayer:item.gradientLayer with:gradientLayer];
             } else {
                 int backgroundLayerIndex = 0;
